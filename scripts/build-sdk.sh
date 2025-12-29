@@ -3,11 +3,6 @@
 ROOTDIR=`pwd`
 PARALLEL=$(getconf _NPROCESSORS_ONLN) # Amount of parallel jobs for the builds
 
-#DEVICE_NAME=stm32mp151aaa-thatico-r2x512v12
-#DEVICE_NAME=stm32mp15xxab-som-v11
-#DEVICE_NAME=stm32mp157aaa-thatico-r2x512v12
-#DEVICE_NAME=stm32mp15xxab-som-v11
-#DEVICE_NAME=stm32mp135f-dk
 DEVICE_NAME=stm32mp131dae-som
 #DEVICE_NAME=stm32mp157c-dk2
 

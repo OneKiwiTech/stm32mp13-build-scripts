@@ -2,7 +2,7 @@
 
 clone_atf() {
     if [ ! -d "atf-stm32mp" ]; then
-        git clone git@github.com:OneKiwiEmbedded/atf-stm32mp.git -b onekiwi-v2.8-stm32mp-r1.1
+        git clone https://github.com/OneKiwiTech/stm32mp13-tfa.git -b v2.8-stm32mp-r1.1
     fi
 }
 
@@ -13,7 +13,7 @@ build_atf_mp13() {
 
 build_atf_release_mp13() {
     #source ${ENV_SETUP}
-    cd atf-stm32mp
+    cd stm32mp13-tfa
     #TFA_BL32=build/stm32mp1/release/bl2.bin
     ARG="PLAT=stm32mp1 ARCH=aarch32 AARCH32_SP=optee ARM_ARCH_MAJOR=7 STM32MP13=1 STM32MP_SDMMC=1 STM32MP_EMMC=1 STM32MP_USB_PROGRAMMER=1"
     PATH_BL33=${ROOTDIR}/output/u-boot-nodtb.bin
@@ -38,7 +38,7 @@ build_atf_release_mp13() {
 
 build_atf_debug_mp13() {
     #source ${ENV_SETUP}
-    cd atf-stm32mp
+    cd stm32mp13-tfa
     ARG="PLAT=stm32mp1 ARCH=aarch32 AARCH32_SP=optee LOG_LEVEL=40 DEBUG=1 ARM_ARCH_MAJOR=7 STM32MP13=1 STM32MP_SDMMC=1 STM32MP_EMMC=1 STM32MP_USB_PROGRAMMER=1"
     PATH_BL33=${ROOTDIR}/output/u-boot-nodtb.bin
     PATH_BL33_CFG=${ROOTDIR}/output/u-boot.dtb

@@ -2,13 +2,13 @@
 
 clone_uboot() {
     if [ ! -d "uboot-stm32mp" ]; then
-        git clone git@github.com:OneKiwiEmbedded/uboot-stm32mp.git -b onekiwi-v2022.10-stm32mp-r1.1
+        git clone https://github.com/OneKiwiTech/stm32mp13-uboot.git -b v2022.10-stm32mp-r1.1
     fi
 }
 
 build_uboot_debug() {
     source ${ENV_SETUP}
-    cd uboot-stm32mp
+    cd stm32mp13-uboot
     export KBUILD_OUTPUT=./build
     make distclean
     unset -v CFLAGS LDFLAGS

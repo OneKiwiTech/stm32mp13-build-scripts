@@ -1,9 +1,9 @@
 sdk/en.SDK-x86_64-stm32mp1-openstlinux-6.1-yocto-mickledore-mp1-v23.06.21.tar.gz
 sdk/stm32mp1-openstlinux-6.1-yocto-mickledore-mp1-v23.06.21/
 sdk-6.1-mickledore/
-uboot-stm32mp/
-atf-stm32mp/
-linux-stm32mp/
+stm32mp13-uboot/
+stm32mp13-tfa/
+stm32mp13-linux/
 output/
-optee_os-stm32mp/
+stm32mp13-optee_os/
 meta-st-stm32mp/

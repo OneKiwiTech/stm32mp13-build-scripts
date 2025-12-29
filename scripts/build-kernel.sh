@@ -2,13 +2,13 @@
 
 clone_linux() {
     if [ ! -d "linux-stm32mp" ]; then
-        git clone git@github.com:OneKiwiEmbedded/linux-stm32mp.git -b onekiwi-v6.1-stm32mp-r1.1
+        git clone https://github.com/OneKiwiTech/stm32mp13-linux.git -b v6.1-stm32mp-r1.1
     fi
 }
 
 build_linux() {
     source ${ENV_SETUP}
-    cd linux-stm32mp
+    cd stm32mp13-linux
     make distclean
     export KBUILD_OUTPUT=./build
     unset -v CFLAGS LDFLAGS
